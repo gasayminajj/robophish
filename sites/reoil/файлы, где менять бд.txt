@@ -1,0 +1,8 @@
+- admin:
+adminka.php
+delete.php
+text.php
+
+- auth:
+pc.php
+mobile.php

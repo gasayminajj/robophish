@@ -1,0 +1,75 @@
+@font-face{
+
+font-family: 'ProximaNova';
+
+src: url('../fonts/ProximaNova-Regular.eot');
+
+src: url('../fonts/ProximaNova-Regular.eot?iefix') format('eot'),
+
+url('../fonts/ProximaNova-Regular.woff') format('woff'),
+
+url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+
+url('../fonts/ProximaNova-Regular.svg#webfont') format('svg');
+
+font-weight: normal;
+
+font-style: normal;
+
+}
+
+body {
+    font-family: ProximaNova;
+    background: #1e1e28;
+}
+.main {
+    margin-top:35px;
+    text-align:center;
+}
+.main p {
+    font-size:33px;
+    margin:0;
+    padding:0;
+    color:white;
+}
+.main ul a {
+    text-decoration: none;
+    color: #feb856;
+    background-color: #17171f;
+}
+.main li {
+    list-style-type: none;
+        margin-top:42px;
+}
+.main ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    font-size:20px;
+   }
+.adm {
+    border-radius: 23px;
+    background-color:#FEB856;
+    color: #17171f;
+    padding:12px 42px;
+}
+.log1 {
+    border-radius: 23px;
+    padding:12px 87px;
+}
+.log2 {
+    border-radius: 23px;
+    padding:12px 73px;
+}
+.log3 {
+    border-radius: 23px;
+    padding:12px 80px;
+}
+#body1 {
+    background: #272632;
+}
+#cont {
+    padding-top:200px;
+    text-align:center;
+    margin:0 auto;
+    color:white;
+}
