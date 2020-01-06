@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+html, body {
+	height: 100%;
+	}
+
+/* ---[ Footer markup ]--- */
+	
+footer > div {
+	position: relative;
+	margin: 0px auto;
+	font-size: 0px;
+	cursor: default;
+	}
+	footer > div {
+		width: inherit;
+		clear: both;
+		}
+	footer > div:first-of-type {
+		margin-top: 0px;
+		}
+	footer > div:last-child {
+		margin-bottom: 0px;
+		}
+	footer > div > div {
+		width: inherit;
+		height: inherit;
+		display: table-cell;
+		vertical-align: middle;
+		}
+	footer img {
+		border: none;
+		}
+
+/* ---[ Footer config ]--- */
+
+footer {
+	width: 100%;
+	min-width: 800px;
+	height: 90px;
+	line-height: 0px;
+	}
+
+footer > div {
+	width: 800px;
+	margin: 10px auto;
+	text-align: center;
+	}
+	
+	footer .copyright p {
+		margin: 0px;
+		color: #52575a;
+		font: 11px/16px Arial, Helvetica, sans-serif;
+		text-align: center;
+		text-transform: none;
+		}
+
+/* ---[ Footer custom ]--- */
+
+footer > div:first-of-type {
+	padding-top: 12px;
+	}
+
+footer > div.logos > div > *,
+footer > div.counters > * {
+	margin: 0px 12px;
+	}

