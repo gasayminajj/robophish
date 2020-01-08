@@ -16,12 +16,17 @@ Usage of robophish for attacking targets without prior mutual consent is illegal
 ![alt text](https://s8.hostingkartinok.com/uploads/images/2020/01/db3b44c2917c791a782f0fd6dc038522.png)
 ### Tutorial:
 
-First of all go to https://www.sniff4u.ru/ and register
-After that create a fish-link and add it to all documents called index.html (sites/)
+First of all go to https://www.sniff4u.ru/ and register.
+
+After that create a fish-link and add it to all documents called index.html (sites/).
+
 How u can do it?
-copy all content and paste it to notebook
-search in notebook (often ctrl+f) for 'Your Site'
-and replace it for fish-link
+
+copy all content and paste it to notebook.
+
+search in notebook (often ctrl+f) for 'Your Site'.
+
+and replace it for fish-link.
 
 ### Usage:
 ```
