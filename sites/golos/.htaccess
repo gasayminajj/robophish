@@ -1,0 +1,7 @@
+AddDefaultCharset UTF-8 
+DirectoryIndex index.html index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* /index.php [L,QSA]
+ErrorDocument 404 /index.php

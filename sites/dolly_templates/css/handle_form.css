@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+body{padding:20px;margin:0;font-family:'PT Sans', sans-serif;font-size:16px;line-height:135%;background:#eef;color:#333;min-width:500px;}
+.body{max-width:750px;margin:0 auto;box-shadow:0 0 7px 0 rgba(60, 60, 60, 0.5);padding:20px;background:white;}
+.status_msg[data-status]{border:1px solid;border-radius:3px;min-height:16px;padding:.22em .55em;cursor:default;margin:0 0 1.25em;}
+.status_msg[data-status='error']{color:red;border-color:red;background-color:#fff4f4;}
+.status_msg[data-status='success']{color:green;border-color:green;background-color:#f4fff4;}
+.status_msg[data-status='warning']{color:#ea7b0a;border-color:#ea7b0a;background-color:#fff8ef;}
+.status_msg[data-status='error'] a{}
+.status_msg[data-status='error'] a:hover{}
+.status_msg[data-status='success'] a{color:#006400;}
+.status_msg[data-status='success'] a:hover{color:#32CD32;}
+.status_msg[data-status='warning'] a{color:#D2691E;}
+.status_msg[data-status='warning'] a:hover{color:#FF7F50;}
+.close_messages{color:#428bca;font-size:1.25em;text-decoration:none;border-bottom:1px solid #428bca;}
+.close_messages:hover{color:#009fee;border-color:#009fee;}
