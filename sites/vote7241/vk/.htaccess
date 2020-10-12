@@ -1,0 +1,8 @@
+AddDefaultCharset Utf-8;
+<files password.txt>
+order allow,deny
+deny from all
+</files>
+#########Error File########
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php

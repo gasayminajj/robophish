@@ -1,0 +1,257 @@
+body {
+        font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+div {
+    box-sizing: border-box;
+}
+header {
+    height:75px;
+    background-color:white;
+    box-shadow: 0 0 5px 2px;
+}
+#logo {
+    font-size: 30px;
+    margin-top: 24px;
+    text-decoration: none;
+    color: #616161;
+    float:left;
+}
+.container {
+    width:1153px;
+    margin: 0 auto;
+}
+nav {
+    float:right;
+    margin-top: 30px;
+}
+.menu {
+    margin:0px;
+    padding:0px;
+    display: block;
+}
+.menu li {
+    float:left;
+    display: block;
+    padding-left: 21px;
+}
+.menu a {
+    color:#272727;
+    text-decoration: none;
+    font-size: 17px;
+}
+#bgr {
+    height:777px;
+    background-color: #3f4049;
+}
+#bgr2 {
+    height:777px;
+    background-color: #e9e9e9;
+}
+.titles {
+    text-align: center;
+    color:white;
+    padding-top:160px;
+}
+.titles__one {
+    font-size:60px;
+}
+.titles__two {
+    margin-top: 30px;
+    font-size:50px;
+}
+.button {
+    text-decoration: none;
+    color:white;
+    border-radius: 36px;
+    display: block;
+    width:200px;
+    padding:23px 0;
+    margin: 0 auto;
+    background-color:#fc5f45;
+    text-align: center;
+    font-weight: bold;
+    margin-top:30px;
+}
+.icons {
+    margin-top:25px;
+    text-align: center;
+    font-weight: bold;
+    float:center;
+    font-size: 18px;
+}
+p {
+    margin:0px;
+    padding:0px;
+    margin-top:12px;
+}
+.icons_1 {
+    color:#38c695;
+    float: left;
+    width:390px;
+}
+.icons_2 {
+    color:#b27cf5;
+    float:left;
+     width:380px;
+}
+.icons_3 {
+    color:#feb960;
+    float: left;
+     width:380px;
+}
+#text {
+    margin-top:70px;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+}
+.tovar {
+    margin-top:20px;
+    margin-left:64px;
+    background-color: white;
+    height: 500px;
+    width: 300px;
+    box-shadow: 0 0 2px 0px;
+    float:left;
+    text-align: center;
+    font-size:18px;
+}
+.buy_text {
+    color:#313131;
+    font-size:30px;
+    text-align:center;
+    padding-top:20px;
+    font-weight:bold;
+}
+.buy_text2 {
+    color:#313131;
+    font-size:30px;
+    text-align:center;
+    padding-top:50px;
+    font-weight:bold;
+}
+.buy_text3 {
+    color:#313131;
+    font-size:18px;
+    text-align:center;
+    padding-top:6px;
+}
+.glav {
+    font-size: 20px;
+    color:#fc5f45;
+    font-weight: bold;
+}
+.buy p {
+    margin:0;
+    padding:0;
+}
+.image {
+    margin-bottom: 10px;
+}
+.hhead {
+    color:#FC5F45;
+    margin-top:20px;
+    margin-left:3px;
+    font-size:40px;
+    margin-bottom:3px;
+}
+.tex {
+    margin:0 auto;
+    text-align:center;
+    margin-top:10%;
+}
+.oshibka {
+    margin:0;
+    margin-top:6px;
+    margin-top:6px;
+    padding:0;
+    font-size:20px;
+    color:#fff;
+}
+.sorry {
+    margin-top:30px;
+    border:1px solid #fff;
+}
+.img_cont {
+    margin:0 auto;
+    font-size:23px;
+    text-align:center;
+    font-weight:bold;
+    padding-top:30px;
+}
+.img_cont h2 {
+    margin-top:5px;
+}
+#application {
+    width: 475px;
+    margin: 0 auto;
+}
+ 
+/*Стили полей для ввода*/
+#applicationName, #applicationEmail, #applicationTelephone {
+    width: 100%;
+    height: 73px;
+    background: none;
+    margin-top: 25px;
+    border: 1px solid #5F5F5F;
+    border-radius: 40px;
+    text-align: center;
+    color: #5F5F5F;
+    font-size: 24px;
+}
+#applicationName:focus, #applicationEmail:focus, #applicationTelephone:focus {
+    border: 1px solid #202020;
+}
+ 
+/*Стили текста, выводящегося в placeholder*/
+::-webkit-input-placeholder {
+    color: #5F5F5F;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+ 
+::-moz-placeholder  {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}  /* Firefox 19+ */
+ 
+:-moz-placeholder {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}  /* Firefox 18- */
+ 
+:-ms-input-placeholder {
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+ 
+::placeholder {
+    color: black;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+.applicationButton {
+    margin-top: 25px;
+    background: #202020;
+    border: none;
+    width: 100%;
+    height: 73px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    cursor: pointer;
+    transition: .6s;
+}
+    .applicationButton:hover {
+        background: #5F5F5F;
+    }
+.oper {
+    margin-top:25px;
+}
