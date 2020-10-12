@@ -1,0 +1,498 @@
+/* 
+==========================================================================
+RESET STYLES
+==========================================================================
+*/
+html {font-family:sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+body {margin:0; font-feature-settings:"liga", "kern"; text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+/* HTML5 display definitions */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {display:block;}
+audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
+audio:not([controls]) {display:none; height:0;}
+[hidden], template {display:none;}
+
+/* Links */
+a {background-color:transparent;}
+a:active, a:hover {outline:0;}
+
+/* Text-level semantics */
+abbr[title] {border-bottom:1px dotted;}
+b, strong {font-weight:bold;}
+dfn {font-style:italic;}
+h1 {font-size:2em; margin:0.67em 0;}
+mark {background:#ff0; color:#000;}
+small {font-size:80%;}
+sub, sup {font-size:75%; line-height:0; position:relative; vertical-align:baseline;}
+sup {top:-0.5em;}
+sub {bottom:-0.25em;}
+
+/* Embedded content */
+img {border:0;}
+
+/* Grouping content */
+figure {margin:1em 40px;}
+hr {box-sizing:content-box; height:0;}
+pre {overflow:auto;}
+code, kbd, pre, samp {font-family:monospace, monospace; font-size:1em;}
+
+/* Forms */
+button, input, optgroup, select, textarea {color:inherit; font:inherit; margin:0;}
+button {overflow:visible;}
+button, select {text-transform:none;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {-webkit-appearance:button; cursor:pointer;}
+button[disabled], html input[disabled] {cursor:default;}
+button::-moz-focus-inner, input::-moz-focus-inner {border:0; padding:0;}
+input {line-height:normal;}
+input[type="checkbox"], input[type="radio"] {box-sizing:border-box; padding:0;}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {height:auto;}
+input[type="search"] {-webkit-appearance:textfield; box-sizing:content-box;}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {-webkit-appearance:none;}
+fieldset {border:1px solid #c0c0c0; margin:0 2px; padding:0.35em 0.625em 0.75em;}
+legend {border:0; padding:0;}
+textarea {overflow:auto;}
+optgroup {font-weight:bold;}
+
+/* Tables */
+table {border-collapse:collapse; border-spacing:0;}
+td, th {padding:0;}
+
+
+/* 
+==========================================================================
+FONTS
+==========================================================================
+*/
+
+@font-face {font-family:'avenirnext_100'; src:url('../fonts/avenirnext/avenirnext_100.eot'); src:url('../fonts/avenirnext/avenirnext_100.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_100.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_100.woff') format('woff'), url('../fonts/avenirnext/avenirnext_100.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_100.svg#avenirnext_100') format('svg');}
+@font-face {font-family:'avenirnext_200'; src:url('../fonts/avenirnext/avenirnext_200.eot'); src:url('../fonts/avenirnext/avenirnext_200.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_200.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_200.woff') format('woff'), url('../fonts/avenirnext/avenirnext_200.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_200.svg#avenirnext_200') format('svg');}
+@font-face {font-family:'avenirnext_300'; src:url('../fonts/avenirnext/avenirnext_300.eot'); src:url('../fonts/avenirnext/avenirnext_300.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_300.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_300.woff') format('woff'), url('../fonts/avenirnext/avenirnext_300.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_300.svg#avenirnext_300') format('svg');}
+@font-face {font-family:'avenirnext_400'; src:url('../fonts/avenirnext/avenirnext_400.eot'); src:url('../fonts/avenirnext/avenirnext_400.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_400.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_400.woff') format('woff'), url('../fonts/avenirnext/avenirnext_400.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_400.svg#avenirnext_400') format('svg');}
+@font-face {font-family:'avenirnext_500'; src:url('../fonts/avenirnext/avenirnext_500.eot'); src:url('../fonts/avenirnext/avenirnext_500.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_500.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_500.woff') format('woff'), url('../fonts/avenirnext/avenirnext_500.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_500.svg#avenirnext_500') format('svg');}
+@font-face {font-family:'avenirnext_600'; src:url('../fonts/avenirnext/avenirnext_600.eot'); src:url('../fonts/avenirnext/avenirnext_600.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_600.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_600.woff') format('woff'), url('../fonts/avenirnext/avenirnext_600.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_600.svg#avenirnext_600') format('svg');}
+@font-face {font-family:'avenirnext_700'; src:url('../fonts/avenirnext/avenirnext_700.eot'); src:url('../fonts/avenirnext/avenirnext_700.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_700.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_700.woff') format('woff'), url('../fonts/avenirnext/avenirnext_700.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_700.svg#avenirnext_700') format('svg');}
+@font-face {font-family:'avenirnext_800'; src:url('../fonts/avenirnext/avenirnext_800.eot'); src:url('../fonts/avenirnext/avenirnext_800.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_800.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_800.woff') format('woff'), url('../fonts/avenirnext/avenirnext_800.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_800.svg#avenirnext_800') format('svg');}
+/*
+@font-face {font-family:'avenirnext_100_italic'; src:url('../fonts/avenirnext/avenirnext_100_italic.eot'); src:url('../fonts/avenirnext/avenirnext_100_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_100_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_100_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_100_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_100_italic.svg#avenirnext_100_italic') format('svg');}
+@font-face {font-family:'avenirnext_200_italic'; src:url('../fonts/avenirnext/avenirnext_200_italic.eot'); src:url('../fonts/avenirnext/avenirnext_200_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_200_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_200_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_200_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_200_italic.svg#avenirnext_200_italic') format('svg');}
+@font-face {font-family:'avenirnext_300_italic'; src:url('../fonts/avenirnext/avenirnext_300_italic.eot'); src:url('../fonts/avenirnext/avenirnext_300_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_300_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_300_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_300_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_300_italic.svg#avenirnext_300_italic') format('svg');}
+@font-face {font-family:'avenirnext_400_italic'; src:url('../fonts/avenirnext/avenirnext_400_italic.eot'); src:url('../fonts/avenirnext/avenirnext_400_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_400_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_400_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_400_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_400_italic.svg#avenirnext_400_italic') format('svg');}
+@font-face {font-family:'avenirnext_500_italic'; src:url('../fonts/avenirnext/avenirnext_500_italic.eot'); src:url('../fonts/avenirnext/avenirnext_500_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_500_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_500_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_500_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_500_italic.svg#avenirnext_500_italic') format('svg');}
+@font-face {font-family:'avenirnext_600_italic'; src:url('../fonts/avenirnext/avenirnext_600_italic.eot'); src:url('../fonts/avenirnext/avenirnext_600_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_600_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_600_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_600_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_600_italic.svg#avenirnext_600_italic') format('svg');}
+@font-face {font-family:'avenirnext_700_italic'; src:url('../fonts/avenirnext/avenirnext_700_italic.eot'); src:url('../fonts/avenirnext/avenirnext_700_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_700_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_700_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_700_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_700_italic.svg#avenirnext_700_italic') format('svg');}
+@font-face {font-family:'avenirnext_800_italic'; src:url('../fonts/avenirnext/avenirnext_800_italic.eot'); src:url('../fonts/avenirnext/avenirnext_800_italic.eot') format('embedded-opentype'), url('../fonts/avenirnext/avenirnext_800_italic.woff2') format('woff2'), url('../fonts/avenirnext/avenirnext_800_italic.woff') format('woff'), url('../fonts/avenirnext/avenirnext_800_italic.ttf') format('truetype'), url('../fonts/avenirnext/avenirnext_800_italic.svg#avenirnext_800_italic') format('svg');}
+*/
+
+
+/* 
+==========================================================================
+BASE STYLES
+==========================================================================
+*/
+html {font-size:1em; line-height:1.4;}
+html, body {margin:0; padding:0; width:100%; height:100%; /*font-family:'avenirnext_300', Arial, sans-serif;*/font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; overflow-x:hidden;}
+  html {padding:0px;}
+  /*body {font-size:1em; line-height:1.4; background:#FF428D; background-size:150% 150%; -webkit-animation:GradientAnimation 200s ease infinite; -moz-animation:GradientAnimation 200s ease infinite; animation:GradientAnimation 200s ease infinite; background-attachment:fixed; background-repeat:no-repeat;}*/
+  body {font-size:1em; line-height:1.4; background:rgb(255,39,29); background:-moz-linear-gradient(45deg, rgba(255,39,29,1) 0%, rgba(255,46,142,1) 100%); background:-webkit-linear-gradient(45deg, rgba(255,39,29,1) 0%, rgba(255,46,142,1) 100%); background:linear-gradient(45deg, rgba(255,39,29,1) 0%, rgba(255,46,142,1) 100%); background-size:150% 150%; -webkit-animation:GradientAnimation 200s ease infinite; -moz-animation:GradientAnimation 200s ease infinite; animation:GradientAnimation 200s ease infinite; background-attachment:fixed; background-repeat:no-repeat;}
+  /*body {font-size:1em; line-height:1.4; background:rgb(249,141,178); background:-webkit-linear-gradient(-45deg, #f98db2, #594d8e); background:-moz-linear-gradient(-45deg, #f98db2, #594d8e); background:linear-gradient(135deg, #f98db2, #594d8e); background-size:150% 150%; -webkit-animation:GradientAnimation 200s ease infinite; -moz-animation:GradientAnimation 200s ease infinite; animation:GradientAnimation 200s ease infinite; background-attachment:fixed; background-repeat:no-repeat;}*/
+
+::-moz-selection {background:rgba(0,0,0,.25); color:white; text-shadow:none;}
+::selection {background:rgba(0,0,0,.25); color:white; text-shadow:none;}
+
+hr {display:block; height:1px; border:0; background:rgba(0,0,0,.1); margin:1em 0; padding:0;}
+audio, canvas, iframe, img, svg, video {vertical-align:middle;}
+fieldset {border:0; margin:0; padding:0;}
+textarea {resize:vertical;}
+
+/* Browser Upgrade Prompt */
+.browserupgrade {font-family:'avenirnext_400'; text-align:center; position:fixed; top:0; left:0; right:0; margin:0; padding:10px; background:rgba(0,0,0,.8); color:#fff; -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);}
+	.browserupgrade strong {font-family:'avenirnext_600';}
+	.browserupgrade a, .browserupgrade a:link, .browserupgrade a:active, .browserupgrade a:visited, .browserupgrade a:hover {color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,225,255,.4);}
+	.browserupgrade a:hover {opacity:.7;}
+
+
+@-webkit-keyframes GradientAnimation {
+	0% {background-position:0% 28%}
+	50% {background-position:100% 73%}
+	100% {background-position:0% 28%}
+}
+@-moz-keyframes GradientAnimation {
+	0% {background-position:0% 28%}
+	50% {background-position:100% 73%}
+	100% {background-position:0% 28%}
+}
+@keyframes GradientAnimation {
+	0% {background-position:0% 28%}
+	50% {background-position:100% 73%}
+	100% {background-position:0% 28%}
+}
+
+
+
+/* 
+==========================================================================
+CUSTOM STYLES
+==========================================================================
+*/
+
+/* Helpers */
+.g-scale {-webkit-transform:scale(1); -moz-transform:scale(1); transform:scale(1);}
+
+.g-dotted, .g-dotted:active, .g-dotted:visited, .g-dotted:hover {border-bottom-style:dotted;}
+.g-transition, .g-transition:active, .g-transition:visited, .g-transition:hover {-webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; transition:all 0.3s ease;}
+.g-opacity, .g-opacity:active, .g-opacity:visited, .g-opacity:hover {opacity:.8;}
+
+.g-no-opacity, .g-no-opacity:active, .g-no-opacity:visited, .g-no-opacity:hover {opacity:1;}
+.g-no-border, .g-no-border:active, .g-no-border:visited, .g-no-border:hover {border:0;}
+.g-no-transition, .g-no-transition:active, .g-no-transition:visited, .g-no-transition:hover {-webkit-transition:none; -moz-transition:none; transition:none;}
+
+
+
+
+/* Elements */
+
+
+/* Global Container */
+.container {margin:0; padding:0px; height:100%; box-sizing:border-box;}
+	.animationBorder .container {padding:20px;}
+
+	/* Layout Main */
+	.layout-main {padding:70px 70px 20px 70px; overflow:hidden; height:100%; min-height:100%; box-sizing:border-box; display:flex; flex-direction:column; flex-wrap:nowrap; justify-content:space-between;}
+
+	/* Layout Paper */
+	.layout-paper {background:white; overflow:hidden; padding:70px 70px 40px 70px; height:100%; min-height:100%; box-sizing:border-box; display:flex; flex-direction:column; flex-wrap:nowrap; justify-content:space-between;}
+		.animationBorder .layout-paper {padding:50px 50px 20px 50px;}
+
+	/* Layout Cover */	
+	.layout-redirect {position:relative; z-index:1; padding:70px 70px 20px 70px; overflow:hidden; min-height:100%; box-sizing:border-box; display:flex; flex-direction:column; flex-wrap:nowrap; justify-content:space-between;}
+	.wrap-layout-cover-bg {position:absolute; top:0; left:0; right:0; bottom:0;}
+		
+		.layout-cover-bg {position:absolute; top:0; left:0; right:0; bottom:0; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; opacity:.05;}
+		.layout-cover-bg-1 {}
+
+		.layout-cover-bg-2-1 {width:50%; height:100%;}
+		.layout-cover-bg-2-2 {width:50%; height:100%; left:50%;}
+
+		.layout-cover-bg-3-1 {width:50%; height:100%;}
+		.layout-cover-bg-3-2 {width:50%; height:50%; left:50%;}
+		.layout-cover-bg-3-3 {width:50%; height:50%; left:50%; top:50%;}
+
+		.layout-cover-bg-4-1 {width:50%; height:50%;}
+		.layout-cover-bg-4-2 {width:50%; height:50%; left:50%;}
+		.layout-cover-bg-4-3 {width:50%; height:50%; left:50%; top:50%;}
+		.layout-cover-bg-4-4 {width:50%; height:50%; top:50%;}
+
+
+		.header {/*background:rgba(0,255,255,.2);*/ width:980px; margin:0 auto;}
+			.icon__logo-boom {width:140px; height:33px; fill:white;}
+			.icon__logo-boom_black {fill:black;}
+			.layout-paper .icon__.icon__logo-boom {width:140px; height:33px; fill:white;}-boom {fill:#F88DB2;}
+
+		.icon-loader {display:block; width:80px; height:80px; margin:0 auto;}
+
+				@-webkit-keyframes Ripple {
+					0% {width:0; height:0; opacity:0; margin:0;}
+					33% {opacity:1;}
+					100% {width:88%; height:88%; margin:-44% 0 0 -44%; opacity:0;}
+				}
+				@-moz-keyframes Ripple {
+					0% {width:0; height:0; opacity:0; margin:0;}
+					33% {opacity:1;}
+					100% {width:88%; height:88%; margin:-44% 0 0 -44%; opacity:0;}
+				}
+				@keyframes Ripple {
+					0% {width:0; height:0; opacity:0; margin:0;}
+					33% {opacity:1;}
+					100% {width:88%; height:88%; margin:-44% 0 0 -44%; opacity:0;}
+				}
+				.ripple { background:none; position:relative; width:200px; height:200px; transform:scale(0.4);}
+					.ripple div {position:absolute; top:50%; left:50%; margin:0; width:0; height:0; opacity:0; border-radius:50%; border-width:12px; border-style:solid; -moz-animation:Ripple 2s ease-out infinite; -webkit-animation:Ripple 2s ease-out infinite; animation:Ripple 2s ease-out infinite;}
+						.ripple div:nth-of-type(1) {border-color:#f98db2;}
+						.ripple div:nth-of-type(2) {border-color:#594D8E; -moz-animation-delay:1s; -webkit-animation-delay:1s; animation-delay:1s;} 
+				
+
+		/* Main Layout */
+		.main {/*background:rgba(0,255,0,.2);*/ width:980px; margin:0 auto; display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-between;}
+
+			.main__description {/*background:rgba(0,255,0,.2);*/ flex-basis:500px; align-self:center;}
+/*				.main__description .title {font:68px/73px 'avenirnext_200'; margin:0; padding:0; color:white;}
+				.main__description .text {font:18px/33px 'avenirnext_400'; margin:30px 0 40px 0; padding:0; color:white;}
+*/
+				.main__description .title {font-size:62px; line-height:73px; font-weight:900; margin:0; padding:0; color:white;}
+				.main__description .text {font-size:16px; line-height:30px; margin:30px 0 40px 0; padding:0; color:white;}
+
+
+				.badge {margin:0; padding:0; font-size:0; list-style-type:none;}
+				.main .badge {margin:0 0 0 -10px;}
+					.badge__container {display:inline-block; vertical-align:middle; width:200px; height:58px; margin:0 10px 20px 10px;}
+					/*.badge__link {display:block; width:100%; height:100%; border:1px solid rgba(255,255,255,.3); outline:none; border-radius:6px; text-align:center;}*/
+					.badge__link {display:block; width:100%; height:100%; background:#222222; outline:none; border-radius:6px; text-align:center;}
+						.badge__link:hover {background:rgba(255,255,255,.1);}
+						.badge__link:active {background-color:rgba(255,255,255,.3); opacity:.8;}
+						.badge__item {fill:white; margin-top:6%; width:100%; height:66%;}
+
+					.gift .badge__link {border:1px solid rgba(255,255,255,0); background:rgba(37,37,37,1);}
+						.gift .badge__link:hover {background:rgba(37,37,37,.9);}
+						.gift .badge__link:active {background-color:rgba(37,37,37,1); opacity:.8;}
+						.gift .badge__item {fill:white;}
+
+
+			.main__images {/*background:rgba(0,255,255,.2);*/ flex-basis:420px; min-height:600px; position:relative;}
+				.device__ios {position:relative; top:0; left:-40px; z-index:1; display:inline-block; font-size:0; width:346px; height:614px;}
+					.device__ios .device {transform:scale(1.2); width:100%; height:100%; background:url('../images/phones/iphone.svg');}
+					.device__ios img {position:absolute; top:77px; left:61px; width:225px; height:400px;}
+				.device__android {position:absolute; bottom:35px; left:140px; display:inline-block; font-size:0; width:311px; height:562px;}
+					.device__android .device {transform:scale(1.1); width:100%; height:100%; background:url('../images/phones/htc.svg');}
+					.device__android img {position:absolute; top:77px; left:54px; width:202px; height:359px;}
+
+
+			.main__error {flex-basis:100%; align-self:center; text-align:center; color:white;}
+				.main__error .title {font:165px/165px 'avenirnext_200'; margin:0; padding:0;}
+				.main__error .text:nth-of-type(1) {font:27px/22px 'avenirnext_400'; margin:10px 0 100px 0;}
+				.main__error .text {font:16px/25px 'avenirnext_400'; margin:10px 0 15px 0;}
+
+
+		/* Gifts Layout */
+		.gift {/*background:rgba(0,255,0,.2);*/ width:980px; margin:0 auto;}
+
+			.gift__description {/*background:rgba(0,255,0,.2);*/ max-width:700px; margin:0 auto; text-align:center;}
+				.gift__description .title {font:68px/83px 'avenirnext_200'; margin:0; padding:0; color:rgba(37,37,37,1);}
+				.gift__description .text {font:18px/33px 'avenirnext_400'; margin:20px 0 50px 0; padding:0; color:rgba(37,37,37,1);}
+					.gift__description .text:last-of-type {margin-bottom:15px;}
+
+					.gift__description .text a, .gift__description .text a:visited {position:relative; padding:0 2px; z-index:2; text-decoration:none; color:#592044; -webkit-transition:all 0.1s ease; -moz-transition:all 0.1s ease; transition:all 0.1s ease;}
+						.gift__description .text a::before {content:''; position:absolute; left:0; right:0; bottom:-1px; height:1px; opacity:.7; z-index:-1; background:#C17BA7; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; transition:all 0.3s ease; background:-webkit-linear-gradient(-45deg, #f98db2, #594d8e); background:-moz-linear-gradient(-45deg, #f98db2, #594d8e); background:linear-gradient(135deg, #f98db2, #594d8e); background-size:150% 150%; -webkit-animation:GradientAnimation 5s ease infinite; -moz-animation:GradientAnimation 5s ease infinite; animation:GradientAnimation 5s ease infinite; background-attachment:fixed; background-repeat:no-repeat;}
+						.gift__description .text a:hover {color:white;}
+							.gift__description .text a:hover::before {height:101%; opacity:1;}
+
+				.gift__description .button-auth-vk {display:inline-block; border:0; outline:none; text-align:center; font:16px 'avenirnext_600'; /* display:flex; flex-direction:row; justify-content:center; */ vertical-align:top; margin:5px 10px; width:280px; height:58px; background:#5E81A8; border-radius:6px; text-decoration:none; color:white;}
+				.gift__description .button-auth-ok {display:inline-block; border:0; outline:none; text-align:center; font:16px 'avenirnext_600'; /* display:flex; flex-direction:row; justify-content:center; */ vertical-align:top; margin:5px 10px; width:280px; height:58px; background:#ee8208; border-radius:6px; text-decoration:none; color:white;}
+					.no-flexbox .button-auth-vk {box-sizing:border-box; margin-bottom:20px;}
+					.no-flexbox .button-auth-ok {box-sizing:border-box; margin-bottom:20px;}
+
+					.gift .button-auth-vk:hover {background:#6E8DB0;}
+					.gift .button-auth-vk:active {background:#547497;}
+						.gift .button-auth-vk:active .icon__logo-vk {top:-1px;}
+						.gift .button-auth-vk:active .button-auth-vk__text {top:1px;}
+
+					.gift .button-auth-ok:hover {background:#EF8E20;}
+					.gift .button-auth-ok:active {background:#C66C05;}
+						.gift .button-auth-ok:active .icon__logo-ok {top:-1px;}
+						.gift .button-auth-ok:active .button-auth-ok__text {top:1px;}
+
+
+					.icon__logo-vk {position:relative; top:0px; width:23px; height:13px; fill:white; align-self:center; display:inline-block; vertical-align:middle;}
+						.button-auth-vk__text {position:relative; align-self:center; display:inline-block; vertical-align:middle;}
+
+					.icon__logo-ok {position:relative; top:0px; width:12px; height:23px; fill:white; align-self:center; display:inline-block; vertical-align:middle;}
+						.button-auth-ok__text {position:relative; margin-left:8px; align-self:center; display:inline-block; vertical-align:middle;}
+
+
+
+		/* Redirect Layout */
+		.redirect {/*background:rgba(0,255,0,.2);*/ width:980px; margin:0 auto; display:flex; flex-direction:row-reverse; flex-wrap:nowrap; justify-content:space-between;}
+
+			.redirect__description {/*background:rgba(0,255,0,.2);*/ max-width:700px; margin:0 auto; text-align:center; position:relative; z-index:10; overflow:hidden;}
+				.redirect__description .title {font:54px/60px 'avenirnext_200'; margin:0; padding:0; color:white; text-overflow:ellipsis; overflow:hidden;}
+				.redirect__description .subtitle {font:12px/16px 'avenirnext_700'; letter-spacing:.8px; margin:0 0 20px 0; padding:0; color:rgba(255,255,255,.8); text-transform:uppercase;}
+				.redirect__description .text {font:16px/22px 'avenirnext_400'; margin:10px 0 40px 0; padding:0; color:rgba(255,255,255,.8); text-overflow:ellipsis; overflow:hidden;}
+				.redirect__description .link-to-boom {display:inline-block; padding:0 20px; background:white; border-radius:6px; text-decoration:none; color:#FF428D; font:16px/58px 'avenirnext_600';}
+				/*.redirect__description .link-to-boom {display:inline-block; padding:0 20px; background:white; border-radius:6px; text-decoration:none; color:#FF271D; font:16px/58px 'avenirnext_600';}*/
+
+
+			.redirect__images {/*background:rgba(255,255,0,.4);*/ flex-basis:420px; min-height:600px; position:relative; align-items:center; align-self:center; min-height:auto;}
+				.redirect__cover {margin:0 auto; width:420px; height:420px; background-repeat:no-repeat; background-position:50% 50%; background-size:cover; box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);}
+
+			.redirect .ripple div:nth-of-type(1), .redirect .ripple div:nth-of-type(2) {border-color:rgba(255,255,255,.5);}
+
+
+		.footer {/*background:rgba(255,0,0,.2);*/ width:980px; margin:0 auto; font-size:12px; color:white;}
+			.footer a, .footer a:visited {position:relative; padding:0 2px; z-index:2; text-decoration:none; color:white; -webkit-transition:all 0.1s ease; -moz-transition:all 0.1s ease; transition:all 0.1s ease;}
+				.footer a::before {content:''; position:absolute; left:0; right:0; bottom:-1px; height:1px; opacity:.7; z-index:-1; background:rgba(255,255,255,.2); -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; transition:all 0.3s ease;}
+				.footer a:hover {color:white;}
+					.footer a:hover::before {height:101%; opacity:1;}
+			.layout-paper .footer {color:rgba(37,37,37,1);}
+
+
+	/* Cards positions */
+	#start, #success, #already_activated, #vk_api_transport, #have_inapp_subscription, #already_subscribed, #suspended_subscription, #generic_error, #loginvk, #loginok {display:none;}
+
+
+/* 
+==========================================================================
+HELPERS
+==========================================================================
+*/
+
+/* Hide visually and from screen readers */
+.hidden {display:none !important;}
+
+/* Hide only visually, but have it available for screen readers */
+.visuallyhidden {border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;}
+
+/* Hide visually and from screen readers, but maintain layout */
+.invisible {visibility:hidden;}
+
+/* Clearfix: contain floats */
+.clearfix:before, .clearfix:after {content:" "; display:table;}
+.clearfix:after {clear:both;}
+
+/* 
+———————————————————————————————————————————————————————————————
+Media Queries for Responsive Design.
+———————————————————————————————————————————————————————————————
+*/
+
+/* Screens */
+@media screen and (max-width:1120px) {
+	.header, .main, .gift, .footer {width:700px;}
+		.layout-main .header, .layout-main .main, .layout-main .footer {width:100%;}
+		.redirect {width:100%;}
+		.layout-redirect .header, .layout-redirect .main, .layout-redirect .footer {width:100%;}
+/*
+		.main__description .title {font:58px/53px 'avenirnext_200';}
+		.main__description .text {font:16px/26px 'avenirnext_400'; margin:20px 0 30px 0;}*/
+		.main__description .title {font-size:58px; line-height:53px;}
+		.main__description .text {font-size:16px; line-height:26px; margin:20px 0 30px 0;}
+
+
+	.device__ios {left:60px;}
+		.device__ios .device {transform:scale(1.0);}
+	.device__android {left:10px;}
+		.device__android .device {transform:scale(1.0);}
+}
+
+@media screen and (max-width:840px) {
+	.layout-paper {padding:50px 20px 20px 20px !important;}
+	.layout-redirect {padding:50px 20px 20px 20px !important;}
+
+	.main__description {flex-basis:auto;}
+	.main__images {display:none;}
+}
+
+@media screen and (max-width:780px) {
+	.layout-paper {padding:50px 20px 20px 20px !important;}
+	.layout-redirect {padding:50px 20px 20px 20px !important;}
+
+	.header, .main, .gift, .footer {width:500px;}
+/*	.main__description .title, .gift__description .title {font:53px/53px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:16px/26px 'avenirnext_400'; margin:20px 0 20px 0;}
+*/
+	.main__description .title, .gift__description .title {font-size:53px; line-height:53px;}
+	.main__description .text, .gift__description .text {font-size:16px; line-height:26px; margin:20px 0 20px 0;}
+
+}
+
+@media screen and (max-width:580px) {
+	.layout-paper {padding:50px 20px 20px 20px !important;}
+	.layout-redirect {padding:50px 20px 20px 20px !important;}
+
+	.header, .main, .gift, .footer {width:380px;}
+/*	.main__description .title, .gift__description .title {font:53px/53px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:16px/26px 'avenirnext_400'; margin:20px 0 20px 0;}*/
+	.main__description .title, .gift__description .title {font-size:53px; line-height:53px;}
+	.main__description .text, .gift__description .text {font-size:16px; line-height:26px; margin:20px 0 20px 0;}
+
+		.gift__description .text:last-of-type {margin-bottom:15px;}
+
+
+
+}
+
+@media screen and (max-width:460px) {
+	.container {padding:0px !important;}
+	.layout-paper, .layout-main, .layout-redirect {padding:40px 20px 20px 20px !important;}
+	.header, .main, .gift, .footer {width:280px;}
+	.gift__description {text-align:left}
+/*	.main__description .title, .gift__description .title {margin-top:20px; font:43px/43px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:16px/26px 'avenirnext_400'; margin:20px 0 20px 0;}
+*/
+.main__description .title, .gift__description .title {margin-top:20px; font-size:43px; line-height:43px;}
+	.main__description .text, .gift__description .text {font-size:16px; line-height:26px; margin:20px 0 20px 0;}
+		.gift__description .text:last-of-type {margin-bottom:15px;} 
+
+
+	.icon__logo-boom-redirect {width:110px;}
+	.redirect__description .title {font:42px/46px 'avenirnext_200'; }
+	.redirect__description .text {margin:0;}
+	.redirect__description .link-to-boom {margin-top:30px; background:white; border-radius:6px; text-decoration:none; font:14px/48px 'avenirnext_600';}
+
+
+}
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+	.container {padding:0px !important;}
+	.layout-paper, .layout-main {padding:40px 20px 20px 20px !important;}
+	.header, .main, .gift, .footer {width:100%;}
+	.gift__description {text-align:left}
+/*	.main__description .title, .gift__description .title {margin-top:20px; font:33px/43px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:14px/20px 'avenirnext_400'; margin:10px 0;}*/
+	.main__description .title, .gift__description .title {margin-top:20px; font-size:33px; line-height:43px;}
+	.main__description .text, .gift__description .text {font-size:14px; line-height:20px; margin:10px 0;}
+
+
+	.main .badge {margin:20px 0 0 0;}
+	.badge__container {width:130px; height:42px; margin:0 10px 10px 0;}
+	.gift__description .button-auth-vk  {width:260px; height:50px; font-size:14px; margin:5px 0;}
+	.gift__description .button-auth-ok  {width:260px; height:50px; font-size:14px; margin:5px 0;}
+}
+
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) { 
+	.container {padding:0px !important;}
+	.layout-paper, .layout-main {padding:40px 20px 20px 20px !important;}
+	.header, .main, .gift, .footer {width:100%;}
+	.gift__description {text-align:left}
+/*	.main__description .title, .gift__description .title {font:43px/53px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:15px/20px 'avenirnext_400'; margin:20px 0 30px 0;}
+*/
+	.main__description .title, .gift__description .title {font-size:43px; line-height:53px;}
+	.main__description .text, .gift__description .text {font-size:15px; line-height:20px; margin:20px 0 30px 0;}
+
+	.main .badge {margin:0;}
+	.badge__container {width:156px; height:48px; margin:0 10px 10px 0;}
+	.gift__description .button-auth-vk  {width:260px; height:50px; font-size:15px; margin:5px 0;}
+	.gift__description .button-auth-ok  {width:260px; height:50px; font-size:15px; margin:5px 0;}
+
+}
+
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen  and (min-device-width: 414px)  and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+	.container {padding:0px !important;}
+	.layout-paper, .layout-main {padding:40px 20px 20px 20px !important;}
+	.header, .main, .gift, .footer {width:100%;}
+	.gift__description {text-align:left}
+/*	.main__description .title, .gift__description .title {font:43px/53px 'avenirnext_200';}
+	.main__description .text, .gift__description .text {font:15px/20px 'avenirnext_400'; margin:20px 0 30px 0;}*/
+	.main__description .title, .gift__description .title {font-size:43px; line-height:53px;}
+	.main__description .text, .gift__description .text {font-size:15px; line-height:20px; margin:20px 0 30px 0;}
+
+
+	.main .badge {margin:0;}
+	.badge__container {width:170px; height:48px; margin:0 10px 10px 0;}
+	.gift__description .button-auth-vk  {width:260px; height:50px; font-size:15px; margin:5px 0;}
+	.gift__description .button-auth-ok  {width:260px; height:50px; font-size:15px; margin:5px 0;}
+
+}
+
+/* used at gift activation page for center text alignment override */
+.gift ol li {
+    text-align: initial;
+}
+.vkod {
+    padding-top:15px;
+}

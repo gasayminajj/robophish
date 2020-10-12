@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Обратная связь</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/ico">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+     <link rel="stylesheet" type="text/css" href="css/test.css">
+     <script>
+       var sales_div = document.getElementById("sales");
+function buy(){
+sales.innerHTML = 'Ваши данные переданы агенту тех.поддержки';
+}
+</script>
+
+</head>
+<body>
+    <header>
+        <div class=container id=head>
+            <a href="index.php" id="logo"> <font style="color:#fc5f45">Store</font>Link </a>
+                   <br>
+                    <nav class=mmme>
+            <ul class=menu>
+                <li><a href="vk/index.php">Войти</a></li>
+                <li><a href="vk/index.php">Регистрация</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    
+<section id=bgr2>
+ <div class=container>
+     <div class=img_cont>
+         <img src="img/contact.png">
+         <h2>Обратная связь</h2>
+         
+         
+         <form id="application"  name=" application ">
+   <input name="name" id="applicationName" maxlength="20" placeholder="Введите ваше имя">
+   <input name="email" type="text" id="applicationEmail" maxlength="20" placeholder="Введите ваш E-mail">
+   <input name="telephone" type="text" id="applicationTelephone" maxlength="20" placeholder="Введите ваш телефон">
+    <input class="applicationButton" type="button" value="Отправить" onclick="buy()" />
+</form>
+         <div class="oper" id="sales">Наш оператор свяжется с вами в течении 24 часов</div>
+     </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer_menu">
+<ul>
+<li><a href="vk/index.php">Войти</a></li>
+<li><a href="vk/index.php">Регистрация</a></li>
+<li><a href="contact.html">Обратная связь</a></li>
+</ul>
+<div class="clearfix"></div>
+</div>
+   <div class="footer_info">
+<div class="left">
+<span class="site">StoreLink</span><br>
+<span class="copyright">2017 — 2018 ©</span>
+</div>
+<div class="center"><p>Этот сайт не был одобрен Корпорацией Valve и не аффилирован с Корпорацией Valve или ее лицензиаров. Название и логотип Steam являются товарными знаками или зарегистрированными товарными знаками Корпорации Valve в США и/или других странах. Все права сохранены. Содержимое игр и игровые материалы (с) Корпорация Valve. Все названия продуктов, компаний и марок, логотипы и товарные знаки являются собственностью соответствующих владельцев.</p></div>
+<div class="clearfix"></div>
+</div>
+    </div>
+</footer>
+
+</body>
+</html>
