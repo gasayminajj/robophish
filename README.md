@@ -17,6 +17,6 @@ Usage of robophish for attacking targets without prior mutual consent is illegal
 ### Usage:
 ```
 git clone https://github.com/gasayminajj/robophish
-cd shellphish
+cd robophish
 bash robophish.sh
 ```
