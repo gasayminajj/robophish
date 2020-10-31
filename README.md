@@ -20,15 +20,16 @@ Usage of robophish for attacking targets without prior mutual consent is illegal
 pkg update
 pkg upgrade
 apt install curl git php openssh -y
+git clone https://github.com/gasayminajj/robophish
 ```
 ## Linux Install:
 ```
 apt update & apt upgrade
 apt install curl git php openssh -y
+git clone https://github.com/gasayminajj/robophish
 ```
 ### Usage:
 ```
-git clone https://github.com/gasayminajj/robophish
 cd robophish
 bash robophish.sh
 ```
