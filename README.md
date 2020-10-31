@@ -1,5 +1,5 @@
 
-# robophish v2.2
+# robophish v2.3
 ## Author: github.com/thelinuxchoice
 ## Upgraded by github.com/gasayminajj
 ### Don't copy this code without give me the credits, nerd! 
@@ -15,6 +15,17 @@ Usage of robophish for attacking targets without prior mutual consent is illegal
 
 ![alt text](https://s8.hostingkartinok.com/uploads/images/2020/10/ac2b9961d22560ce08112b683b897558.png)
 
+## Android(Termux) Install:
+```
+pkg update
+pkg upgrade
+apt install curl git php openssh -y
+```
+## Linux Install:
+```
+apt update & apt upgrade
+apt install curl git php openssh -y
+```
 ### Usage:
 ```
 git clone https://github.com/gasayminajj/robophish
