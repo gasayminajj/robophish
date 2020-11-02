@@ -32,5 +32,6 @@ git clone https://github.com/gasayminajj/robophish
 ```
 cd robophish
 bash robophish.sh
+Если вы используете Андроид, то нужно выключить wifi, включить Мобильный интернет, режим модема. БЕЗ ЭТОГО РАБОТАТЬ НИЧЕГО НЕ БУДЕТ
 ```
 
